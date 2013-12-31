@@ -2,3 +2,5 @@
 //= require jquery_ujs
 //= require js_stack
 //= require_tree .
+
+Musicmatch.start()

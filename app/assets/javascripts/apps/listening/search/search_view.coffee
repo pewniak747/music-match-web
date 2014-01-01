@@ -3,3 +3,8 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
     template: -> JST["apps/listening/search/templates/search"]
     className: "listening__search"
 
+    bindings:
+      'input[name=filter]': 'filter'
+
+    onRender: ->
+      @stickit()

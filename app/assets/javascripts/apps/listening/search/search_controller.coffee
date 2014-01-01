@@ -2,21 +2,23 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
   class Search.Controller extends Marionette.Controller
     search: ->
       collection = new App.Entities.Songs
-      @options.region.show(@getLayout(collection))
-      collection.fetch()
+      form = new Backbone.Model
+      @options.region.show(@getLayout(form, collection))
+      form.on 'change:filter', (form, value)=>
+        collection.fetch(data: {filter: value})
 
-    getLayout: (collection)->
+    getLayout: (form, collection)->
       layout = new Search.Layout
       layout.on 'show', =>
-        layout.searchRegion.show(@getSearchView())
+        layout.searchRegion.show(@getSearchView(form))
       collection.on 'sync', =>
         layout.resultsRegion.show(@getResultsView(collection))
       collection.on 'request', =>
         layout.resultsRegion.show(@getLoadingView())
       layout
 
-    getSearchView: ->
-      new Search.Search
+    getSearchView: (form)->
+      new Search.Search(model: form)
 
     getResultsView: (collection)->
       new Search.Results(collection: collection)

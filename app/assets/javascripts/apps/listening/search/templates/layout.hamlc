@@ -1,3 +1,4 @@
 .search-region
 .results-region
+%br
 %a.pure-button{href: '#recommendations'} show my recommendations &raquo;

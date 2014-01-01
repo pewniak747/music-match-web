@@ -2,4 +2,4 @@
 %form.pure-form
   %input.listening__search__search-box{name: "filter", type: "text", placeholder: "Applause"}
 %br
-.pure-button show my recommendations
+%a.pure-button{href: '#recommendations'} show my recommendations

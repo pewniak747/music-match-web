@@ -4,7 +4,10 @@ Musicmatch.module "HeaderApp", (HeaderApp, App, Backbone, Marionette, $, _) ->
       App.headerRegion.show(@getHeaderView())
 
     getHeaderView: ->
-      new HeaderApp.Header
+      model = new Backbone.Model
+      @listenTo App.vent, 'navigated', (where) =>
+        model.set('current', where)
+      new HeaderApp.Header(model: model)
 
   App.addInitializer ->
     controller = new HeaderApp.Controller

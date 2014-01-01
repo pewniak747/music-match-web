@@ -11,6 +11,8 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
         layout.searchRegion.show(@getSearchView())
       collection.on 'sync', =>
         layout.resultsRegion.show(@getResultsView(collection))
+      collection.on 'request', =>
+        layout.resultsRegion.show(@getLoadingView())
       layout
 
     getSearchView: ->
@@ -18,3 +20,6 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
 
     getResultsView: (collection)->
       new Search.Results(collection: collection)
+
+    getLoadingView: ->
+      App.request('components:loading:spinner')

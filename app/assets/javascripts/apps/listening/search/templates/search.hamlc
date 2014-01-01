@@ -1,5 +1,3 @@
 %h1 what song are you listening to?
 %form.pure-form
   %input.listening__search__search-box{name: "filter", type: "text", placeholder: "Applause"}
-%br
-%a.pure-button{href: '#recommendations'} show my recommendations

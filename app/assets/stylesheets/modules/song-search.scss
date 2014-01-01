@@ -1,4 +1,4 @@
-.listening__search {
+.listening__search__layout {
   width: 960px;
   height: 120px;
   position: absolute;
@@ -12,4 +12,8 @@
   .listening__search__search-box {
     width: 50%;
     height: 40px;
+  }
+
+  .listening__search__result {
+    margin: 10px 0;
   }

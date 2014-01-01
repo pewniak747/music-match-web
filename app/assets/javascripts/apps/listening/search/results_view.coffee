@@ -9,6 +9,16 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
     getTemplate: -> JST["apps/listening/search/templates/result"]
     className: "listening__search__result"
 
+    ui:
+      scrobbleButton: '.js-scrobble-button'
+
+    triggers:
+      'click @ui.scrobbleButton': 'scrobble'
+
+    initialize: ->
+      @on 'scrobble', =>
+        @ui.scrobbleButton.addClass('pure-button-disabled').text('got it!')
+
     serializeData: ->
       _.extend @model.attributes,
         artist: @model.get('artist').attributes

@@ -1,5 +1,6 @@
 Musicmatch = new Marionette.Application
 Musicmatch.addRegions
-  mainRegion: 'body'
+  headerRegion: '.header-region'
+  mainRegion: '.main-region'
 
 window.Musicmatch = Musicmatch

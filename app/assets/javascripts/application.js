@@ -5,3 +5,4 @@
 //= require_tree .
 
 Musicmatch.start()
+Backbone.history.start()

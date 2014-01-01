@@ -1,4 +1,4 @@
-.song-search {
+.listening__search {
   width: 960px;
   height: 120px;
   position: absolute;
@@ -9,10 +9,7 @@
   margin-top: -60px;
 }
 
-.song-search__search-cta {
-}
-
-.song-search__search-box {
-  width: 50%;
-  height: 40px;
-}
+  .listening__search__search-box {
+    width: 50%;
+    height: 40px;
+  }

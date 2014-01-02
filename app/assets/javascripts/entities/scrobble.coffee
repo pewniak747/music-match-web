@@ -12,3 +12,6 @@ Musicmatch.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
 
     toJSON: ->
       song_id: @get('song').id
+
+  App.reqres.setHandler 'entities:scrobble', (song)->
+    new Entities.Scrobble(song: song.attributes)

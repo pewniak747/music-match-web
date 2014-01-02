@@ -23,7 +23,8 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
     getResultsView: (collection)->
       view = new Search.Results(collection: collection)
       view.on 'itemview:scrobble', (view, options)->
-        # TODO scrobble options.model
+        scrobble = App.request('entities:scrobble', options.model)
+        scrobble.save()
       view
 
     getLoadingView: ->

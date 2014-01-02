@@ -17,7 +17,7 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
 
     initialize: ->
       @on 'scrobble', =>
-        @ui.scrobbleButton.addClass('pure-button-disabled').text('got it!')
+        @ui.scrobbleButton.addClass('pure-button-disabled').text('got it!').attr('disabled', 'disabled')
 
     serializeData: ->
       _.extend @model.attributes,

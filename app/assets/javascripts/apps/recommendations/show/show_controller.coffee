@@ -2,10 +2,12 @@ Musicmatch.module "RecommendationsApp.Show", (Show, App, Backbone, Marionette, $
   class Show.Controller extends Marionette.Controller
     show: ->
       App.vent.trigger('navigated', 'recommendations')
-      @options.region.show(@getShowView())
+      recommendations = new App.Entities.Recommendations
+      @options.region.show(@getShowView(recommendations))
+      recommendations.fetch()
 
-    getShowView: ->
-      new Show.Show
+    getShowView: (collection)->
+      new Show.Recommendations(collection: collection)
 
   class Show.Router extends Marionette.AppRouter
     appRoutes:

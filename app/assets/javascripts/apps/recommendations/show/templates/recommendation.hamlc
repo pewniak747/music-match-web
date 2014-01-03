@@ -1,0 +1,5 @@
+%img.recommendations__recommendation__artist-image{src: @song.artist.image_url}
+%p
+  %strong= @song.title
+  by
+  %em= @song.artist.name

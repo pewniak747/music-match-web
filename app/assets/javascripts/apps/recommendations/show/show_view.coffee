@@ -6,6 +6,16 @@ Musicmatch.module "RecommendationsApp.Show", (Show, App, Backbone, Marionette, $
     itemViewContainer: ".items"
     className: "recommendations"
 
+    ui:
+      refreshButton: ".js-refresh-button"
+
+    triggers:
+      "click @ui.refreshButton": "refresh"
+
+    initialize: ->
+      @on "refresh", =>
+        @ui.refreshButton.addClass('pure-button-disabled').attr('disabled', 'disabled').text('recommendations will be refreshed soon')
+
   class Show.Recommendation extends Marionette.ItemView
     getTemplate: -> JST["apps/recommendations/show/templates/recommendation"]
     className: "recommendations__recommendation"

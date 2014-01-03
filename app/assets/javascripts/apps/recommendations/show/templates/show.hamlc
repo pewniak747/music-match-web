@@ -1,2 +1,3 @@
 %h1 your music recommendations
+%button.pure-button.js-refresh-button refresh
 .items

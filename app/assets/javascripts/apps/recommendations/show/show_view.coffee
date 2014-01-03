@@ -2,6 +2,7 @@ Musicmatch.module "RecommendationsApp.Show", (Show, App, Backbone, Marionette, $
   class Show.Recommendations extends Marionette.CompositeView
     getTemplate: -> JST["apps/recommendations/show/templates/show"]
     getItemView: -> Show.Recommendation
+    getEmptyView: -> Show.Empty
     itemViewContainer: ".items"
     className: "recommendations"
 
@@ -13,3 +14,6 @@ Musicmatch.module "RecommendationsApp.Show", (Show, App, Backbone, Marionette, $
       _.extend @model.attributes,
         song: _.extend @model.get('song').attributes,
           artist: @model.get('song.artist').attributes
+
+  class Show.Empty extends Marionette.ItemView
+    getTemplate: -> JST["apps/recommendations/show/templates/empty"]

@@ -8,4 +8,4 @@
     %li{for: 'statistics'}
       %a{href: "#statistics"} Statistics
     %li{for: 'sign_out'}
-      %a{href: "#"} Sign out
+      %a.js-logout-button{href: "#"} Sign out

@@ -11,5 +11,7 @@ Musicmatch.module "ListeningApp", (ListeningApp, App, Backbone, Marionette, $, _
       "": "search"
 
   App.addInitializer ->
-    new ListeningApp.Router
+    router = new ListeningApp.Router
       controller: new ListeningApp.Controller
+    App.vent.on 'login', ->
+      router.navigate('listening', trigger: true)

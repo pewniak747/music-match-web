@@ -1,11 +1,11 @@
 .pure-menu.pure-menu-open.pure-menu-horizontal
-  %a.pure-menu-heading{href: "#"}music match
+  %a.pure-menu-heading{href: "/"}music match
   %ul.js-menu
     %li{for: 'listening'}
-      %a{href: "#listening"} Listening
+      %a{href: "/listening"} Listening
     %li{for: 'recommendations'}
-      %a{href: "#recommendations"} Recommendations
+      %a{href: "/recommendations"} Recommendations
     %li{for: 'statistics'}
-      %a{href: "#statistics"} Statistics
+      %a{href: "/statistics"} Statistics
     %li{for: 'sign_out'}
       %a.js-logout-button{href: "#"} Sign out

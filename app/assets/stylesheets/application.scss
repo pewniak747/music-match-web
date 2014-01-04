@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require purecss
- *= require_tree .
  *= require_self
  */
 
@@ -18,5 +17,6 @@ body {
   margin: auto;
 }
 
-@import 'modules/song-search';
+@import 'modules/listening';
+@import 'modules/recommendations';
 @import 'modules/loading';

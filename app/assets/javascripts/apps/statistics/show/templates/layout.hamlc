@@ -2,15 +2,6 @@
 
 .pure-g
   .scrobble-stats-region.pure-u-1
-    %p
-      %strong 350
-      listens total
-    %p
-      %strong 154
-      listens last month
-    %p
-      %strong 44
-      listens last week
   .top-songs-region.pure-u-1-2
     %h2 favourite songs
   .top-artists-region.pure-u-1-2

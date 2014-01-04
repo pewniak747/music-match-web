@@ -1,0 +1,9 @@
+%p
+  %strong= @total_count
+  listens total
+%p
+  %strong= @last_week_count
+  listens last month
+%p
+  %strong= @last_month_count
+  listens last week

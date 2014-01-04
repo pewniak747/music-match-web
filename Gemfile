@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'purecss-rails'
 gem 'spinjs-rails'
 gem 'js_stack'
+gem 'gon'
 
 gem 'rails_12factor'
 

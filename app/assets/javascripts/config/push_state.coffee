@@ -1,5 +1,5 @@
 $ ->
-  $("a").on "click", (evt)->
+  $(document).on "click", "a", (evt)->
     href = $(@).attr("href")
     if (href[0] == "/")
       evt.preventDefault()

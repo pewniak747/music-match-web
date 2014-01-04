@@ -1,5 +1,5 @@
 .recommendations {
-  margin: 20px;
+  @extend %primary-page;
 
   .items {
     margin-top: 20px;

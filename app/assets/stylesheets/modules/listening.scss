@@ -1,5 +1,5 @@
 .listening__search__layout {
-  margin: 20px;
+  @extend %primary-page;
 }
 
   .listening__search__search-box {

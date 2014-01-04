@@ -8,7 +8,6 @@ Musicmatch.module "ListeningApp", (ListeningApp, App, Backbone, Marionette, $, _
   class ListeningApp.Router extends Marionette.AppRouter
     appRoutes:
       "listening": "search"
-      "": "search"
 
   App.addInitializer ->
     router = new ListeningApp.Router

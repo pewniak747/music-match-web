@@ -5,5 +5,7 @@
 //= require musicmatch
 //= require_tree .
 
-Musicmatch.start()
-Backbone.history.start()
+Musicmatch.on('start', function() {
+  Backbone.history.start();
+});
+Musicmatch.start();

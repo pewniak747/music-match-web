@@ -10,10 +10,16 @@ Musicmatch.module "LoginApp", (LoginApp, App, Backbone, Marionette, $, _) ->
       view
 
   class LoginApp.Router extends Marionette.AppRouter
+    appRoutes:
+      "login": "show"
 
   App.addInitializer ->
+    controller = new LoginApp.Controller
     router = new LoginApp.Router
+      controller: controller
     App.vent.on 'logout', ->
-      controller = new LoginApp.Controller
+      router.navigate('login')
       controller.show()
-      router.navigate('')
+
+  App.on 'initialize:after', ->
+    App.vent.trigger('logout')

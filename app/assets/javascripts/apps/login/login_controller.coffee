@@ -1,12 +1,13 @@
 Musicmatch.module "LoginApp", (LoginApp, App, Backbone, Marionette, $, _) ->
   class LoginApp.Controller extends Marionette.Controller
     show: ->
-      App.mainRegion.show(@getLoginView())
+      session = App.request("entities:session")
+      App.mainRegion.show(@getLoginView(session))
 
-    getLoginView: ->
-      view = new LoginApp.Login
+    getLoginView: (session)->
+      view = new LoginApp.Login(model: session)
       view.on 'submit', ->
-        App.vent.trigger('login') # TODO: login process
+        App.execute("authenticate", session)
       view
 
   class LoginApp.Router extends Marionette.AppRouter
@@ -18,8 +19,4 @@ Musicmatch.module "LoginApp", (LoginApp, App, Backbone, Marionette, $, _) ->
     router = new LoginApp.Router
       controller: controller
     App.vent.on 'logout', ->
-      router.navigate('login')
-      controller.show()
-
-  App.on 'initialize:after', ->
-    App.vent.trigger('logout')
+      router.navigate('login', trigger: true)

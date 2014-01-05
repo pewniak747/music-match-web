@@ -5,3 +5,10 @@ Musicmatch.module "LoginApp", (LoginApp, App, Backbone, Marionette, $, _) ->
 
     triggers:
       "submit .js-login-form": "submit"
+
+    bindings:
+      "input[name=email]": "login"
+      "input[name=password]": "password"
+
+    onRender: ->
+      @stickit()

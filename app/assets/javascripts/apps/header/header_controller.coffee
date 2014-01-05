@@ -9,7 +9,7 @@ Musicmatch.module "HeaderApp", (HeaderApp, App, Backbone, Marionette, $, _) ->
         model.set('current', where)
       view = new HeaderApp.Header(model: model)
       view.on 'logout', ->
-        App.vent.trigger('logout')
+        App.execute('unauthenticate')
       view
 
   App.addInitializer ->

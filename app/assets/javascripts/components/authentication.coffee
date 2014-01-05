@@ -29,7 +29,7 @@ Musicmatch.module "Components.Authentication", (Authentication, App, Backbone, M
     Authentication.unauthenticate()
 
   App.reqres.setHandler 'entities:accesstoken', ->
-    Authentication.oauth2.auth()
+    Authentication.oauth2.state
 
   App.reqres.setHandler 'authenticated', ->
     Authentication.oauth2.isAuthenticated()

@@ -2,6 +2,8 @@
 %h2 music recommendation site
 
 %form.pure-form.js-login-form
+  .js-authentication-error.error-message
+    Wrong email / password :(
   %fieldset
 
   %input{type: "email", name: "email", placeholder: "email"}

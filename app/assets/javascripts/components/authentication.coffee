@@ -19,8 +19,8 @@ Musicmatch.module "Components.Authentication", (Authentication, App, Backbone, M
       clientId: gon.oauth2.client_id,
       clientSecret: gon.oauth2.client_secret,
       accessUrl: gon.oauth2.access_url
-    Authentication.oauth2.on 'access', Authentication.authenticationSuccess
-    Authentication.oauth2.on 'error', Authentication.authenticationError
+    Authentication.oauth2.on 'access', -> Authentication.authenticationSuccess()
+    Authentication.oauth2.on 'error', -> Authentication.authenticationError()
 
   App.commands.setHandler 'authenticate', (session)->
     Authentication.authenticate(session)

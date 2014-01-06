@@ -6,7 +6,10 @@ Musicmatch.module "HomepageApp", (HomepageApp, App, Backbone, Marionette, $, _) 
     getLayout: ->
       view = new HomepageApp.Layout
       loginController = new HomepageApp.Login.Controller(region: view.loginRegion)
-      view.on 'show', -> loginController.show()
+      registrationController = new HomepageApp.Registration.Controller(region: view.registrationRegion)
+      view.on 'show', ->
+        loginController.show()
+        registrationController.show()
       view
 
   class HomepageApp.Router extends Marionette.AppRouter

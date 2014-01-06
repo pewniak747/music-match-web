@@ -1,0 +1,7 @@
+%form.pure-form.pure-form-stacked.js-signup-form
+  %legend new member?
+  %fieldset
+    %input{type: "email", name: "email", placeholder: "email"}
+    %input{type: "password", name: "password", placeholder: "password"}
+    %input{type: "password", name: "password_confirmation", placeholder: "repeat password"}
+    %button.pure-button.pure-button-primary{type: "submit"}Sign up

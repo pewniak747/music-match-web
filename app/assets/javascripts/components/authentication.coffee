@@ -11,8 +11,8 @@ Musicmatch.module "Components.Authentication", (Authentication, App, Backbone, M
 
   Authentication.unauthenticate = ->
     @currentSession = null
-    App.vent.trigger('logout')
     @oauth2.clear() # TODO: use revoke after implementing on API
+    App.vent.trigger('logout')
 
   App.addInitializer ->
     Authentication.oauth2 = new Backbone.OAuth2

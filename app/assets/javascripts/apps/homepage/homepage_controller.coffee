@@ -1,7 +1,10 @@
 Musicmatch.module "HomepageApp", (HomepageApp, App, Backbone, Marionette, $, _) ->
   class HomepageApp.Controller extends Marionette.Controller
     show: ->
-      App.mainRegion.show(@getLayout())
+      if App.request('authenticated')
+        @options.router.navigate('listening', trigger: true)
+      else
+        App.mainRegion.show(@getLayout())
 
     getLayout: ->
       view = new HomepageApp.Layout
@@ -20,5 +23,6 @@ Musicmatch.module "HomepageApp", (HomepageApp, App, Backbone, Marionette, $, _) 
     controller = new HomepageApp.Controller
     router = new HomepageApp.Router
       controller: controller
+    controller.options.router = router
     App.vent.on 'logout', ->
       router.navigate('', trigger: true)

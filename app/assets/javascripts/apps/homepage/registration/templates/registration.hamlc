@@ -1,4 +1,4 @@
-%form.pure-form.pure-form-stacked.js-signup-form
+%form.pure-form.pure-form-stacked.js-registration-form
   %legend new member?
   %fieldset
     %input{type: "email", name: "email", placeholder: "email"}

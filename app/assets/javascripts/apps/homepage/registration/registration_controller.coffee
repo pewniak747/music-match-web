@@ -1,7 +1,11 @@
 Musicmatch.module "HomepageApp.Registration", (Registration, App, Backbone, Marionette, $, _) ->
   class Registration.Controller extends Marionette.Controller
     show: ->
-      @options.region.show(@getRegistrationView())
+      registration = App.request('entities:registration')
+      @options.region.show(@getRegistrationView(registration))
 
-    getRegistrationView: ->
-      new Registration.Registration # TODO: registration submit
+    getRegistrationView: (registration)->
+      view = new Registration.Registration(model: registration)
+      view.on 'submit', ->
+        registration.validate() # TODO: registration POST
+      view

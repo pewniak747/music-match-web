@@ -6,6 +6,13 @@ Musicmatch.module "HomepageApp.Registration", (Registration, App, Backbone, Mari
 
     getRegistrationView: (registration)->
       view = new Registration.Registration(model: registration)
-      view.on 'submit', ->
-        registration.validate() # TODO: registration POST
+      view.on 'submit', =>
+        registration.save null,
+          success: =>
+            @registrationSuccessful(registration)
       view
+
+    registrationSuccessful: (registration)->
+      session = App.request('entities:session')
+      session.set(login: registration.get('email'), password: registration.get('password'))
+      App.execute('authenticate', session)

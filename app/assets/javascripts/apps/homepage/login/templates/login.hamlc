@@ -1,0 +1,8 @@
+%form.pure-form.pure-form-stacked.js-login-form
+  %fieldset
+    %legend already a member?
+    %input{type: "email", name: "email", placeholder: "email"}
+    %input{type: "password", name: "password", placeholder: "password"}
+    .js-authentication-error.error-message
+      Wrong email / password :(
+    %button.pure-button.pure-button-primary{type: "submit"}Log in

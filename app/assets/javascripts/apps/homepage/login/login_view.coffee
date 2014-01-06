@@ -1,6 +1,6 @@
-Musicmatch.module "LoginApp", (LoginApp, App, Backbone, Marionette, $, _) ->
-  class LoginApp.Login extends Marionette.ItemView
-    getTemplate: -> JST["apps/login/templates/login"]
+Musicmatch.module "HomepageApp.Login", (Login, App, Backbone, Marionette, $, _) ->
+  class Login.Login extends Marionette.ItemView
+    getTemplate: -> JST["apps/homepage/login/templates/login"]
     className: "login"
 
     triggers:

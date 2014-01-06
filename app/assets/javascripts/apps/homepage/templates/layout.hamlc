@@ -1,0 +1,16 @@
+.pure-g.homepage__hero
+  .pure-u-1-2
+    %h1 Welcome to music match
+    %ol
+      %li tell us what music you're listening to
+      %li get personalized recommendations
+      %li discover great new music!
+  .pure-u-1-4.registration-region
+    %form.pure-form.pure-form-stacked.js-signup-form
+      %legend new member?
+      %fieldset
+        %input{type: "email", name: "email", placeholder: "email"}
+        %input{type: "password", name: "password", placeholder: "password"}
+        %input{type: "password", name: "password_confirmation", placeholder: "repeat password"}
+        %button.pure-button.pure-button-primary{type: "submit"}Sign up
+  .pure-u-1-4.login-region

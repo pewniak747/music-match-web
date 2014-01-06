@@ -4,7 +4,7 @@ Musicmatch.module "HomepageApp.Registration", (Registration, App, Backbone, Mari
     className: "registration"
 
     bindings:
-      "input[name=email]": "login"
+      "input[name=email]": "email"
       "input[name=password]": "password"
       "input[name=password_confirmation]": "password_confirmation"
 

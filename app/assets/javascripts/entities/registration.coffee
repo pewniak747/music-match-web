@@ -1,7 +1,9 @@
 Musicmatch.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
   class Entities.Registration extends Backbone.Model
+    url: -> App.request('api:url', 'registrations')
+
     validation:
-      login:
+      email:
         required: true
       password:
         required: true

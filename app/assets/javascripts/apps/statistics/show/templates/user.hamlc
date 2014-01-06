@@ -1,0 +1,6 @@
+%p
+  %strong email:
+  = @email
+%p
+  %strong joined:
+  %span.js-timestamp

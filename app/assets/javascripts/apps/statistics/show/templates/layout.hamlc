@@ -1,7 +1,8 @@
 %h1 this is you...
 
 .pure-g
-  .scrobble-stats-region.pure-u-1
+  .scrobble-stats-region.pure-u-1-2
+  .user-region.pure-u-1-2
   .top-songs-region.pure-u-1-2
     %h2 favourite songs
   .top-artists-region.pure-u-1-2

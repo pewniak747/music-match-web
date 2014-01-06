@@ -1,0 +1,7 @@
+%img.recommendations__recommendation__artist-image{src: @artist.image_url}
+%p
+  %strong= @title
+  by
+  %em= @artist.name
+  &nbsp;
+  %small= @statistics.total_count_readable

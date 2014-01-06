@@ -6,5 +6,5 @@ Musicmatch.module "StatisticsApp.Show", (Show, App, Backbone, Marionette, $, _) 
     regions:
       scrobbleStatsRegion: ".scrobble-stats-region"
       userRegion: ".user-region"
-      topSongsRegion: ".top-songs-region"
+      favouriteSongsRegion: ".favourite-songs-region"
       topArtistsRegion: ".top-artists-region"

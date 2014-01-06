@@ -4,11 +4,13 @@ Musicmatch.module "StatisticsApp.Show", (Show, App, Backbone, Marionette, $, _) 
       App.vent.trigger('navigated', 'statistics')
       scrobbleStatistics = new App.Entities.ScrobbleStatistics
       user = App.request('entities:current_user')
-      @options.region.show(@getShowLayout(scrobbleStatistics, user))
+      favouriteSongs = App.request('entities:songs:favourites')
+      @options.region.show(@getShowLayout(scrobbleStatistics, user, favouriteSongs))
       scrobbleStatistics.fetch()
       user.fetch()
+      favouriteSongs.fetch()
 
-    getShowLayout: (scrobbleStatistics, user)->
+    getShowLayout: (scrobbleStatistics, user, favouriteSongs)->
       layout = new Show.Layout
       layout.listenTo scrobbleStatistics, 'request', =>
         layout.scrobbleStatsRegion.show(App.request('components:loading:spinner'))
@@ -18,6 +20,10 @@ Musicmatch.module "StatisticsApp.Show", (Show, App, Backbone, Marionette, $, _) 
         layout.userRegion.show(App.request('components:loading:spinner'))
       layout.listenTo user, 'sync', =>
         layout.userRegion.show(@getUserView(user))
+      layout.listenTo favouriteSongs, 'request', =>
+        layout.favouriteSongsRegion.show(App.request('components:loading:spinner'))
+      layout.listenTo favouriteSongs, 'sync', =>
+        layout.favouriteSongsRegion.show(@getFavouriteSongsView(favouriteSongs))
       layout
 
     getScrobbleStatsView: (scrobbleStatistics)->
@@ -25,6 +31,9 @@ Musicmatch.module "StatisticsApp.Show", (Show, App, Backbone, Marionette, $, _) 
 
     getUserView: (user)->
       new Show.User(model: user)
+
+    getFavouriteSongsView: (favouriteSongs)->
+      new Show.FavouriteSongs(collection: favouriteSongs)
 
   class Show.Router extends Marionette.AppRouter
     appRoutes:

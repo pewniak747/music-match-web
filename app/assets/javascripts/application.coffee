@@ -2,6 +2,8 @@
 #= require jquery_ujs
 #= require jquery.spin
 #= require js_stack
+#= require underscore-string
+#= require underscore-inflections
 #= require backbone.oauth2
 #= require musicmatch
 #= require_tree ./config

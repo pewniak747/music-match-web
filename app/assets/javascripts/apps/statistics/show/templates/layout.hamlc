@@ -4,5 +4,4 @@
   .scrobble-stats-region.pure-u-1-2
   .user-region.pure-u-1-2
   .favourite-songs-region.pure-u-1-2
-  .top-artists-region.pure-u-1-2
-    %h2 favourite artists
+  .favourite-artists-region.pure-u-1-2

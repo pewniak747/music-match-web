@@ -4,5 +4,10 @@
 
 .statistics__show__favourite-song {
   @extend .recommendations__recommendation;
-  width: 100%;
+  width: 90%;
+}
+
+.statistics__show__favourite-artist {
+  @extend .recommendations__recommendation;
+  width: 90%;
 }

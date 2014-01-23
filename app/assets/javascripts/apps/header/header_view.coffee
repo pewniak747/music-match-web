@@ -10,8 +10,8 @@ Musicmatch.module "HeaderApp", (HeaderApp, App, Backbone, Marionette, $, _) ->
       "click .js-logout-button": "logout"
 
     initialize: ->
-      @listenTo App.vent, 'login', => @$(".js-menu li").show()
-      @listenTo App.vent, 'logout', => @$(".js-menu li").hide()
+      @listenTo App.vent, 'login', => @$el.show()
+      @listenTo App.vent, 'logout', => @$el.hide()
 
     onRender: ->
       @currentChanged(@model, @model.get('current'))

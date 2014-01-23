@@ -1,12 +1,12 @@
 .header__image
+  %h1.header__title musicmatch
 .pure-menu.pure-menu-open.pure-menu-horizontal.header__menu
-  %a.pure-menu-heading{href: "/"}music match
   %ul.js-menu
     %li{for: 'listening'}
-      %a{href: "/listening"} Listening
+      %a{href: "/listening"} listening
     %li{for: 'recommendations'}
-      %a{href: "/recommendations"} Recommendations
+      %a{href: "/recommendations"} recommendations
     %li{for: 'statistics'}
-      %a{href: "/statistics"} Statistics
+      %a{href: "/statistics"} statistics
     %li{for: 'sign_out'}
-      %a.js-logout-button{href: "#"} Sign out
+      %a.js-logout-button{href: "#"} sign out

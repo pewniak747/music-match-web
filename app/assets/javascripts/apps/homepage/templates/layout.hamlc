@@ -1,4 +1,4 @@
-.pure-g.homepage__hero
+.pure-g-r.homepage__hero
   .pure-u-1-2
     %h1 Welcome to music match
     %ol

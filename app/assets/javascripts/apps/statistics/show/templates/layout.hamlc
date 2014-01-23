@@ -1,6 +1,6 @@
 %h1 this is you...
 
-.pure-g
+.pure-g-r
   .scrobble-stats-region.pure-u-1-2
   .user-region.pure-u-1-2
   .favourite-songs-region.pure-u-1-2

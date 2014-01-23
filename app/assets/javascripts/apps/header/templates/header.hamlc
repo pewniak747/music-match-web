@@ -1,4 +1,5 @@
-.pure-menu.pure-menu-open.pure-menu-horizontal
+.header__image
+.pure-menu.pure-menu-open.pure-menu-horizontal.header__menu
   %a.pure-menu-heading{href: "/"}music match
   %ul.js-menu
     %li{for: 'listening'}

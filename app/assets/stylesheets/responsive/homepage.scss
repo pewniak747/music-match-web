@@ -1,0 +1,30 @@
+@media (max-width: 767px) {
+  .homepage__hero {
+    height: 300px;
+  }
+
+  .homepage__header {
+    font-size: 4em;
+    top: 200px;
+  }
+
+  .registration, .login {
+    float: none;
+    text-align: center;
+    input {
+      margin: 5px auto !important;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage__hero {
+    height: 200px;
+    background-size: 480px;
+  }
+
+  .homepage__header {
+    font-size: 3em;
+    top: 125px;
+  }
+}

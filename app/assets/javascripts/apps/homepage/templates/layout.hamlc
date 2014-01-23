@@ -1,9 +1,12 @@
-.pure-g-r.homepage__hero
-  .pure-u-1-2
-    %h1 Welcome to music match
-    %ol
+.pure-g-r
+  .pure-u-1.homepage__hero
+    %h1.homepage__header musicmatch
+  .pure-u-1.homepage__description
+    %ul
       %li tell us what music you're listening to
+      %li &middot;
       %li get personalized recommendations
+      %li &middot;
       %li discover great new music!
-  .pure-u-1-4.registration-region
-  .pure-u-1-4.login-region
+  .pure-u-1-2.registration-region
+  .pure-u-1-2.login-region

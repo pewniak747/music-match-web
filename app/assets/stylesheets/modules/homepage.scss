@@ -1,5 +1,36 @@
 .homepage__hero {
-  padding: 30px;
-  background-color: #f6f6f6;
-  border-radius: 5px;
+  background-color: #fefefe;
+  background-image: url('http://farm4.staticflickr.com/3597/3388026751_2dcd7936db_o.jpg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 500px;
+}
+
+.homepage__header {
+  text-align: center;
+  color: #fff;
+  font-size: 7em;
+  position: relative;
+  top: 325px;
+}
+
+.homepage__description {
+  margin-top: 20px;
+  text-align: center;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+
+.registration {
+  padding: 20px;
+  text-align: right;
+  float: right;
+}
+
+.login {
+  padding: 20px;
+  float: left;
 }

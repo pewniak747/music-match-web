@@ -16,5 +16,8 @@ Musicmatch.module "Entities", (Entities, App, Backbone, Marionette, $, _) ->
     parse: (response)->
       response.items
 
+  App.reqres.setHandler 'entities:recommendations', ->
+    new Entities.Recommendations
+
   App.reqres.setHandler 'entities:recommendation', ->
     new Entities.Recommendation

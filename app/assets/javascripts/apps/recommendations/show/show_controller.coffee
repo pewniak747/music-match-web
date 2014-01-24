@@ -7,7 +7,11 @@ Musicmatch.module "RecommendationsApp.Show", (Show, App, Backbone, Marionette, $
       recommendations.fetch()
 
     getShowView: (collection)->
-      new Show.Recommendations(collection: collection)
+      view = new Show.Recommendations(collection: collection)
+      view.on 'refresh', ->
+        request = App.request('entities:recommendation')
+        request.save()
+      view
 
   class Show.Router extends Marionette.AppRouter
     appRoutes:

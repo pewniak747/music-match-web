@@ -13,8 +13,17 @@
 
   .listening__search__result {
     margin: 10px 0;
+    line-height: 32px;
     button {
       font-size: 70%;
       margin-left: 10px;
     }
+  }
+
+  .listening__artist-image {
+    width: 32px;
+    height: 32px !important;
+    border-radius: 5px;
+    float: left;
+    margin-right: 8px;
   }

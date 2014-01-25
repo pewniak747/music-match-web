@@ -1,3 +1,4 @@
+%img.listening__artist-image{src: @artist.image_url}
 %strong= @title
 %em by #{@artist.name}
 %button.js-scrobble-button.pure-button.pure-button-primary I'm listening to this!

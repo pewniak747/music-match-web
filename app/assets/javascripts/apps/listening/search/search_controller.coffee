@@ -5,7 +5,10 @@ Musicmatch.module "ListeningApp.Search", (Search, App, Backbone, Marionette, $, 
       form = new Backbone.Model
       @options.region.show(@getLayout(form, collection))
       form.on 'change:filter', (form, value)=>
-        collection.fetch(data: {filter: value})
+        if value?.length
+          collection.fetch(data: {filter: value})
+        else
+          collection.reset([])
 
     getLayout: (form, collection)->
       layout = new Search.Layout

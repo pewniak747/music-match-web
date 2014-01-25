@@ -5,6 +5,7 @@
 #= require underscore-string
 #= require underscore-inflections
 #= require backbone.oauth2
+#= require backbone-safesync
 #= require musicmatch
 #= require_tree ./config
 #= require_tree .

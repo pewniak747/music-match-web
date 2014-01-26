@@ -5,6 +5,11 @@
 .statistics__show__favourite-song {
   @extend .recommendations__recommendation;
   width: 90%;
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 }
 
 .statistics__show__favourite-artist {
